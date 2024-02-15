@@ -25,7 +25,7 @@
             margin-bottom: 5px;  
         }  
   
-        input[type="text"] {  
+        input {  
             width: 100%;  
             padding: 5px;  
             border: 1px solid #ccc;  
@@ -52,6 +52,7 @@
         <input type="hidden" id="v" name="v" value="2">
         <input type="hidden" id="nc" name="nc" value="1">
         <input type="hidden" id="sfid" name="sfid[]" value="3">
+        <input type="hidden" id="tg" name="tg" value="PRIVATE">
         <input type="hidden" id="sort" name="sort" value="rate">
         <div>
             <label for="mn">Hersteller (39: Hyundai, 84: Skoda, 97: VW):</label>
@@ -59,23 +60,23 @@
         </div>
         <div>
             <label for="fref">Mindestreichweite:</label>
-            <input type="text" id="fref" name="fref" placeholder="fref" value="400">
+            <input type="number" id="fref" name="fref" placeholder="fref" min=0 max=1000 value="400">
         </div>
         <div>
             <label for="mlpt">Maximale Monatsrate:</label>
-            <input type="text" id="mlpt" name="mlpt" placeholder="mlpt" value="300">
+            <input type="number" id="mlpt" name="mlpt" placeholder="mlpt" min=0 max=500 value="300">
         </div>
         <div>
             <label for="ym">Laufleistung:</label>
-            <input type="text" id="ym" name="ym" placeholder="ym" value="15000">
+            <input type="number" id="ym" name="ym" placeholder="ym" min=0 max=15000 step=2500 value="15000">
         </div>
         <div>
             <label for="df">Leasingdauer (min):</label>
-            <input type="text" id="df" name="df" placeholder="df" value="12">
+            <input type="number" id="df" name="df" placeholder="df" step="12" min=0 value="12">
         </div>
         <div>
             <label for="dt">Leasingdauer (max):</label>
-            <input type="text" id="dt" name="dt" placeholder="dt" value="48">
+            <input type="number" id="dt" name="dt" placeholder="dt" step="12" min=0 value="48">
         </div>
         <div>
             <label for="pimt">Verfügbar in x Monaten (1: sofort):</label>
